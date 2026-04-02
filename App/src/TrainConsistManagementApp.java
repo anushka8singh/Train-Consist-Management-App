@@ -5,9 +5,20 @@ public class TrainConsistManagementApp {
     public static void main(String[] args) {
         System.out.println("=== Train Consist Management App ===");
 
-        List<String> trainConsist = new ArrayList<>();
+        List<String> passengerBogies = new ArrayList<>();
 
-        System.out.println("Initial bogie count: " + trainConsist.size());
-        System.out.println("Train initialized. Ready to add bogies.");
+        passengerBogies.add("Sleeper");
+        passengerBogies.add("AC Chair");
+        passengerBogies.add("First Class");
+
+        System.out.println("Bogies after insertion: " + passengerBogies);
+
+        passengerBogies.remove("AC Chair");
+        System.out.println("Bogies after removal: " + passengerBogies);
+
+        boolean hasSleeper = passengerBogies.contains("Sleeper");
+        System.out.println("Is 'Sleeper' present? " + hasSleeper);
+
+        System.out.println("Final Bogie List: " + passengerBogies);
     }
 }
